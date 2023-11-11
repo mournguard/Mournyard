@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://buf5mutc6vgii"]
+
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardTile.gd" id="1_24cgy"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardConnection.gd" id="2_row2v"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardNode.gd" id="3_bcyow"]
+[ext_resource type="PackedScene" uid="uid://c1miw6xy45v1q" path="res://addons/Mournyard/Demo/Kenney - Mini Dungeon/floor.glb" id="4_1euo2"]
+[ext_resource type="PackedScene" uid="uid://bt2amtrgxqp2c" path="res://addons/Mournyard/Demo/Kenney - Mini Dungeon/wall.glb" id="5_x4vp1"]
+
+[sub_resource type="Resource" id="Resource_ryko4"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_pcduo"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [false, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_u3rgv"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_0k7bp"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_w80jn"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_pav4q"]
+resource_local_to_scene = true
+script = ExtResource("2_row2v")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_w45en"]
+script = ExtResource("3_bcyow")
+connections = [SubResource("Resource_ryko4"), SubResource("Resource_pcduo"), SubResource("Resource_u3rgv"), SubResource("Resource_0k7bp"), SubResource("Resource_w80jn"), SubResource("Resource_pav4q")]
+rotation = 1
+
+[node name="wall_01" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 2)
+script = ExtResource("1_24cgy")
+node = SubResource("Resource_w45en")
+
+[node name="floor7" parent="." instance=ExtResource("4_1euo2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, 1)
+
+[node name="floor8" parent="." instance=ExtResource("4_1euo2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 1)
+
+[node name="wall" parent="." instance=ExtResource("5_x4vp1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, -1)
+
+[node name="wall2" parent="." instance=ExtResource("5_x4vp1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, -1)

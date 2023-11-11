@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://ltxqutpurnch"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_mfmsd"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/EditorMessage.gd" id="2_3u8e7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87x7l"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0, 0, 0.1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="PanelContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mfmsd")
+script = ExtResource("2_3u8e7")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_87x7l")
+
+[node name="Label" type="RichTextLabel" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+bbcode_enabled = true
+text = "Lorem Ipsum dolor sit amit"
+fit_content = true
+selection_enabled = true

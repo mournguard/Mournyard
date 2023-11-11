@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5bpkk3nbh4fj"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_3on2k"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/ReadonlyVector3.gd" id="1_whuxk"]
+
+[node name="ReadonlyVector3" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("1_3on2k")
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_whuxk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="property" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Property"
+
+[node name="text" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+size_flags_vertical = 0
+text = "This property is readonly."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(24, 32)
+layout_mode = 2
+
+[node name="x" type="Label" parent="VBoxContainer/HBoxContainer/Panel"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -11.5
+offset_right = 10.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.388235, 0.290196, 0.254902, 1)
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="x" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "25.15"
+editable = false
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(24, 32)
+layout_mode = 2
+
+[node name="y" type="Label" parent="VBoxContainer/HBoxContainer/Panel2"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -11.5
+offset_right = 10.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.243137, 0.392157, 0.298039, 1)
+text = "y"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "25.15"
+editable = false
+
+[node name="Panel3" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(24, 32)
+layout_mode = 2
+
+[node name="z" type="Label" parent="VBoxContainer/HBoxContainer/Panel3"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -11.5
+offset_right = 10.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.286275, 0.247059, 0.396078, 1)
+text = "z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="z" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "25.15"
+editable = false

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8qid3h6ou14u"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_i1m2q"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/EditorMessage.gd" id="2_stwwe"]
+
+[node name="PanelContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_i1m2q")
+script = ExtResource("2_stwwe")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 2
+bbcode_enabled = true
+text = "Lorem Ipsum dolor sit amit"
+fit_content = true
+selection_enabled = true

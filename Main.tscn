@@ -1,0 +1,164 @@
+[gd_scene load_steps=21 format=3 uid="uid://npfevgj060a1"]
+
+[ext_resource type="Script" path="res://addons/Mournyard/Resources/YardTillData.gd" id="2_nlqxs"]
+[ext_resource type="PackedScene" uid="uid://buf5mutc6vgii" path="res://addons/Mournyard/Demo/Tiles/Dungeon/wall_01.tscn" id="4_sy2ge"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardPlan.gd" id="5_dda5o"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardConnection.gd" id="5_jc5iu"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardNode.gd" id="6_a50cx"]
+
+[sub_resource type="Resource" id="Resource_xc8ud"]
+script = ExtResource("2_nlqxs")
+data = {
+"wall_01_r0": {
+"connections": [{
+"direction": "(0, 1, 0)",
+"valid": [],
+"value": "v000000000s"
+}, {
+"direction": "(0, -1, 0)",
+"valid": [],
+"value": "v000111111"
+}, {
+"direction": "(1, 0, 0)",
+"valid": ["wall_01_r2", "wall_corner_in_01_r3", "wall_corner_out_01_r2"],
+"value": "000011110"
+}, {
+"direction": "(0, 0, -1)",
+"valid": ["wall_01_r1", "wall_corner_in_01_r2", "wall_corner_out_01_r3"],
+"value": "000110011"
+}, {
+"direction": "(-1, 0, 0)",
+"valid": ["wall_01_r1"],
+"value": "000000111"
+}, {
+"direction": "(1, 0, 0)",
+"valid": ["wall_01_r1"],
+"value": "000111000"
+}],
+"weight": 0.5
+}
+}
+
+[sub_resource type="Resource" id="Resource_v00yj"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_cq24d"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_g7awe"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_514f0"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_aichq"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_ve8e5"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_cn5o2"]
+script = ExtResource("6_a50cx")
+connections = [SubResource("Resource_v00yj"), SubResource("Resource_cq24d"), SubResource("Resource_g7awe"), SubResource("Resource_514f0"), SubResource("Resource_aichq"), SubResource("Resource_ve8e5")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_knhef"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_exmdk"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_q1fdo"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_dutto"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_h3i6y"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_gu88u"]
+resource_local_to_scene = true
+script = ExtResource("5_jc5iu")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_5u5s6"]
+script = ExtResource("6_a50cx")
+connections = [SubResource("Resource_knhef"), SubResource("Resource_exmdk"), SubResource("Resource_q1fdo"), SubResource("Resource_dutto"), SubResource("Resource_h3i6y"), SubResource("Resource_gu88u")]
+rotation = 0
+
+[node name="Main" type="Node3D"]
+
+[node name="YardPlan" type="Node" parent="."]
+script = ExtResource("5_dda5o")
+tiles_path = "res://addons/Mournyard/Demo/Tiles"
+rooms_path = "res://addons/Mournyard/Demo/Rooms"
+size = Vector3(25, 1, 25)
+planning_area = true
+till_data = SubResource("Resource_xc8ud")
+
+[node name="wall_01" parent="YardPlan" instance=ExtResource("4_sy2ge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 50)
+node = SubResource("Resource_cn5o2")
+
+[node name="wall_02" parent="YardPlan" instance=ExtResource("4_sy2ge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 50)
+node = SubResource("Resource_5u5s6")

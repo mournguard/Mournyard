@@ -1,0 +1,1392 @@
+[gd_scene load_steps=175 format=3 uid="uid://koatqkxjed2t"]
+
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardRoom.gd" id="1_swbj1"]
+[ext_resource type="PackedScene" uid="uid://buf5mutc6vgii" path="res://addons/Mournyard/Demo/Tiles/Dungeon/wall_01.tscn" id="2_yblbu"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardConnection.gd" id="3_s60bs"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardNode.gd" id="4_pcina"]
+[ext_resource type="PackedScene" uid="uid://bnln4f8s7u02x" path="res://addons/Mournyard/Demo/Tiles/Dungeon/wall_corner_in_01.tscn" id="5_xjrbx"]
+[ext_resource type="PackedScene" uid="uid://c3f4f0d12o72s" path="res://addons/Mournyard/Demo/Tiles/Dungeon/floor_01.tscn" id="6_efxmk"]
+
+[sub_resource type="Resource" id="Resource_q5dbx"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_wgg1o"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_ogic7"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.82129e-07, 0, -1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_7lkou"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.82129e-07, 0, 1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_lnqiq"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.82129e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_2i2sd"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.82129e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_sfqib"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_q5dbx"), SubResource("Resource_wgg1o"), SubResource("Resource_ogic7"), SubResource("Resource_7lkou"), SubResource("Resource_lnqiq"), SubResource("Resource_2i2sd")]
+rotation = 1
+
+[sub_resource type="Resource" id="Resource_hta3e"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_5t4q4"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_nsf8x"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.82129e-07, 0, -1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_1ab7d"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.82129e-07, 0, 1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_rymjw"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.82129e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_3248d"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.82129e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_sm8dq"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_hta3e"), SubResource("Resource_5t4q4"), SubResource("Resource_nsf8x"), SubResource("Resource_1ab7d"), SubResource("Resource_rymjw"), SubResource("Resource_3248d")]
+rotation = 1
+
+[sub_resource type="Resource" id="Resource_qv4eo"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_g5jfi"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_xth3y"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.82129e-07, 0, -1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_rytjm"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.82129e-07, 0, 1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_vepdk"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.82129e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_5qx06"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.82129e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_tk6tv"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_qv4eo"), SubResource("Resource_g5jfi"), SubResource("Resource_xth3y"), SubResource("Resource_rytjm"), SubResource("Resource_vepdk"), SubResource("Resource_5qx06")]
+rotation = 1
+
+[sub_resource type="Resource" id="Resource_xh7pa"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_pbd31"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_sa3qh"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 3.25841e-07)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_ssycc"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -3.25841e-07)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_gg62i"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-3.25841e-07, 0, -1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_seik6"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(3.25841e-07, 0, 1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_ss7fa"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_xh7pa"), SubResource("Resource_pbd31"), SubResource("Resource_sa3qh"), SubResource("Resource_ssycc"), SubResource("Resource_gg62i"), SubResource("Resource_seik6")]
+rotation = 2
+
+[sub_resource type="Resource" id="Resource_74ayx"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_1sx7e"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_s22r2"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 3.25841e-07)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_xce3v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -3.25841e-07)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_lx2rk"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-3.25841e-07, 0, -1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_5krpl"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(3.25841e-07, 0, 1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_fs0en"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_74ayx"), SubResource("Resource_1sx7e"), SubResource("Resource_s22r2"), SubResource("Resource_xce3v"), SubResource("Resource_lx2rk"), SubResource("Resource_5krpl")]
+rotation = 2
+
+[sub_resource type="Resource" id="Resource_8cajl"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_rcso0"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_g76n4"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(3.69552e-07, 0, 1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_mali1"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-3.69552e-07, 0, -1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_muf4b"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 3.69552e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_c6a4y"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -3.69552e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_4q5h2"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_8cajl"), SubResource("Resource_rcso0"), SubResource("Resource_g76n4"), SubResource("Resource_mali1"), SubResource("Resource_muf4b"), SubResource("Resource_c6a4y")]
+rotation = 3
+
+[sub_resource type="Resource" id="Resource_3ldwg"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_02oqu"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_ds624"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(3.69552e-07, 0, 1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_3ijd2"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-3.69552e-07, 0, -1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_f1v7l"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 3.69552e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_uucxc"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -3.69552e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_4jp4j"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_3ldwg"), SubResource("Resource_02oqu"), SubResource("Resource_ds624"), SubResource("Resource_3ijd2"), SubResource("Resource_f1v7l"), SubResource("Resource_uucxc")]
+rotation = 3
+
+[sub_resource type="Resource" id="Resource_p5ndg"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_fh8dm"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_11vsr"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(3.69552e-07, 0, 1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_aea6w"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-3.69552e-07, 0, -1)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_b447m"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 3.69552e-07)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_qxk2l"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -3.69552e-07)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_qtron"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_p5ndg"), SubResource("Resource_fh8dm"), SubResource("Resource_11vsr"), SubResource("Resource_aea6w"), SubResource("Resource_b447m"), SubResource("Resource_qxk2l")]
+rotation = 3
+
+[sub_resource type="Resource" id="Resource_3p518"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_hye2v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_m77h5"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.38418e-07)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_eftsv"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.38418e-07)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_o8pj7"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.38418e-07, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_xtr4v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.38418e-07, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_1nknh"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_3p518"), SubResource("Resource_hye2v"), SubResource("Resource_m77h5"), SubResource("Resource_eftsv"), SubResource("Resource_o8pj7"), SubResource("Resource_xtr4v")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_7smsl"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_s1tlr"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_eaxyv"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.38418e-07)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_8yteb"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.38418e-07)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_oufei"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.38418e-07, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_ev8te"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.38418e-07, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_pajrb"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_7smsl"), SubResource("Resource_s1tlr"), SubResource("Resource_eaxyv"), SubResource("Resource_8yteb"), SubResource("Resource_oufei"), SubResource("Resource_ev8te")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_x3o62"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_283i4"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_acbha"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-4.37114e-08, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_siytq"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(4.37114e-08, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_h7py3"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -4.37114e-08)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_plg2y"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 4.37114e-08)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_yncm6"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_x3o62"), SubResource("Resource_283i4"), SubResource("Resource_acbha"), SubResource("Resource_siytq"), SubResource("Resource_h7py3"), SubResource("Resource_plg2y")]
+rotation = 1
+
+[sub_resource type="Resource" id="Resource_v2q76"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_t4ssn"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_1pp1p"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 8.74228e-08)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_fjepr"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -8.74228e-08)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_nax83"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-8.74228e-08, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_hdjlw"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(8.74228e-08, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_7p4lp"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_v2q76"), SubResource("Resource_t4ssn"), SubResource("Resource_1pp1p"), SubResource("Resource_fjepr"), SubResource("Resource_nax83"), SubResource("Resource_hdjlw")]
+rotation = 2
+
+[sub_resource type="Resource" id="Resource_chv6p"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_1cfso"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_cmn51"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.50343e-07, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_oqd5q"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.50343e-07, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_qyyvv"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.50343e-07)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_ido4v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.50343e-07)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_l2xdt"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_chv6p"), SubResource("Resource_1cfso"), SubResource("Resource_cmn51"), SubResource("Resource_oqd5q"), SubResource("Resource_qyyvv"), SubResource("Resource_ido4v")]
+rotation = 3
+
+[sub_resource type="Resource" id="Resource_d3wmf"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_mlhlm"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_mnthf"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -1.19209e-07)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_6mjwv"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 1.19209e-07)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_f6ky0"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1.19209e-07, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_lrb77"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1.19209e-07, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_m1w1e"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_d3wmf"), SubResource("Resource_mlhlm"), SubResource("Resource_mnthf"), SubResource("Resource_6mjwv"), SubResource("Resource_f6ky0"), SubResource("Resource_lrb77")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_g7ylj"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_rhswv"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_4grje"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_4cs4d"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_dbd71"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_lo318"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_6w0l5"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_g7ylj"), SubResource("Resource_rhswv"), SubResource("Resource_4grje"), SubResource("Resource_4cs4d"), SubResource("Resource_dbd71"), SubResource("Resource_lo318")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_h1avf"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_xus7n"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_mr7sb"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_wtsp4"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_niusc"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_aphgq"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_gn4gg"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_h1avf"), SubResource("Resource_xus7n"), SubResource("Resource_mr7sb"), SubResource("Resource_wtsp4"), SubResource("Resource_niusc"), SubResource("Resource_aphgq")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_50cjy"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_rnd7s"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_yp6vx"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_k21bq"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_bwd8k"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_ajgke"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_qetfk"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_50cjy"), SubResource("Resource_rnd7s"), SubResource("Resource_yp6vx"), SubResource("Resource_k21bq"), SubResource("Resource_bwd8k"), SubResource("Resource_ajgke")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_if3f1"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_aow2v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_eabuj"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_mxelj"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_s2lg1"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_m6ek2"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_rvv0j"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_if3f1"), SubResource("Resource_aow2v"), SubResource("Resource_eabuj"), SubResource("Resource_mxelj"), SubResource("Resource_s2lg1"), SubResource("Resource_m6ek2")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_qrosr"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_hfuki"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_4k28f"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_a24q8"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_6rdq8"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_l2tvk"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_10sry"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_qrosr"), SubResource("Resource_hfuki"), SubResource("Resource_4k28f"), SubResource("Resource_a24q8"), SubResource("Resource_6rdq8"), SubResource("Resource_l2tvk")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_rlel5"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_g1tk5"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_kug63"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_7i6ax"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_u2sn4"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_cvapu"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_8w4r1"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_rlel5"), SubResource("Resource_g1tk5"), SubResource("Resource_kug63"), SubResource("Resource_7i6ax"), SubResource("Resource_u2sn4"), SubResource("Resource_cvapu")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_gt8uj"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_5sral"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_vqoal"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_hwqmy"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_vs7x0"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_18n5j"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_5lhpu"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_gt8uj"), SubResource("Resource_5sral"), SubResource("Resource_vqoal"), SubResource("Resource_hwqmy"), SubResource("Resource_vs7x0"), SubResource("Resource_18n5j")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_eugfr"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_p827f"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_8gw7w"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_fwncn"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_xrmju"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_4hjgp"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_xabun"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_eugfr"), SubResource("Resource_p827f"), SubResource("Resource_8gw7w"), SubResource("Resource_fwncn"), SubResource("Resource_xrmju"), SubResource("Resource_4hjgp")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_uhgsc"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_a3058"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_qkdl2"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_xm4nm"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_y0dyg"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_y5xni"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_gaodb"]
+resource_local_to_scene = true
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_uhgsc"), SubResource("Resource_a3058"), SubResource("Resource_qkdl2"), SubResource("Resource_xm4nm"), SubResource("Resource_y0dyg"), SubResource("Resource_y5xni")]
+rotation = 0
+
+[sub_resource type="Resource" id="Resource_3x1vb"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_tlvhp"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, false, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_fhnl0"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, -2.38418e-07)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_7kv2v"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 2.38418e-07)
+gate = true
+sockets = [null, null, null, true, true, null, null, true, true]
+
+[sub_resource type="Resource" id="Resource_jgojn"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(2.38418e-07, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, false, true, true, true]
+
+[sub_resource type="Resource" id="Resource_hkqqp"]
+resource_local_to_scene = true
+script = ExtResource("3_s60bs")
+position = Vector3(0, 0, 0)
+direction = Vector3(-2.38418e-07, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, false, null, null]
+
+[sub_resource type="Resource" id="Resource_fwvew"]
+script = ExtResource("4_pcina")
+connections = [SubResource("Resource_3x1vb"), SubResource("Resource_tlvhp"), SubResource("Resource_fhnl0"), SubResource("Resource_7kv2v"), SubResource("Resource_jgojn"), SubResource("Resource_hkqqp")]
+rotation = 0
+
+[node name="Dungeon5x5D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+script = ExtResource("1_swbj1")
+
+[node name="wall_05" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -6)
+node = SubResource("Resource_sfqib")
+
+[node name="wall_06" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -2)
+node = SubResource("Resource_sm8dq")
+
+[node name="wall_07" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, 2)
+node = SubResource("Resource_tk6tv")
+
+[node name="wall_08" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 6)
+node = SubResource("Resource_ss7fa")
+
+[node name="wall_10" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 6)
+node = SubResource("Resource_fs0en")
+
+[node name="wall_11" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, 2)
+node = SubResource("Resource_4q5h2")
+
+[node name="wall_12" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, -2)
+node = SubResource("Resource_4jp4j")
+
+[node name="wall_13" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, -6)
+node = SubResource("Resource_qtron")
+
+[node name="wall_03" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
+node = SubResource("Resource_1nknh")
+
+[node name="wall_04" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10)
+node = SubResource("Resource_pajrb")
+
+[node name="wall_corner_in_01" parent="." instance=ExtResource("5_xjrbx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -10)
+node = SubResource("Resource_yncm6")
+
+[node name="wall_corner_in_02" parent="." instance=ExtResource("5_xjrbx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 0, 6)
+node = SubResource("Resource_7p4lp")
+
+[node name="wall_corner_in_03" parent="." instance=ExtResource("5_xjrbx")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6, 0, 6)
+node = SubResource("Resource_l2xdt")
+
+[node name="wall_corner_in_04" parent="." instance=ExtResource("5_xjrbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10)
+node = SubResource("Resource_m1w1e")
+
+[node name="floor_01" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+node = SubResource("Resource_6w0l5")
+
+[node name="floor_02" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+node = SubResource("Resource_gn4gg")
+
+[node name="floor_03" parent="." instance=ExtResource("6_efxmk")]
+node = SubResource("Resource_qetfk")
+
+[node name="floor_04" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+node = SubResource("Resource_rvv0j")
+
+[node name="floor_05" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+node = SubResource("Resource_10sry")
+
+[node name="floor_06" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+node = SubResource("Resource_8w4r1")
+
+[node name="floor_07" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+node = SubResource("Resource_5lhpu")
+
+[node name="floor_08" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+node = SubResource("Resource_xabun")
+
+[node name="floor_09" parent="." instance=ExtResource("6_efxmk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+node = SubResource("Resource_gaodb")
+
+[node name="wall_02" parent="." instance=ExtResource("2_yblbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10)
+node = SubResource("Resource_fwvew")

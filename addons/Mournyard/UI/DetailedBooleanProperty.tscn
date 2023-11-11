@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnxjww0scf1q7"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_k5uyw"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/DetailedBooleanProperty.gd" id="2_x0ntn"]
+
+[node name="DetailedBooleanProperty" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+theme = ExtResource("1_k5uyw")
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("2_x0ntn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="value" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="property" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Property"
+
+[node name="text" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+text = "This would be a very long property description This would be a very long property description This would be a very long property description This would be a very long property description This would be a very long property description This would be a very long property description This would be a very long property description "
+autowrap_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/value" to="." method="_on_value_pressed"]

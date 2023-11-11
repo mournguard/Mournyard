@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://brytqpwskg5bp"]
+
+[ext_resource type="Texture2D" uid="uid://buaofjbkwgiod" path="res://addons/Mournyard/Images/gate_arrow.png" id="1_5yjav"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8huvn"]
+transparency = 1
+cull_mode = 2
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(0, 0.454902, 0.8, 1)
+albedo_texture = ExtResource("1_5yjav")
+point_size = 127.1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wn54v"]
+
+[node name="GateArrow" type="MeshInstance3D"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_8huvn")
+mesh = SubResource("PlaneMesh_wn54v")

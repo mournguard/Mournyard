@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3f4f0d12o72s"]
+
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardTile.gd" id="1_i03gl"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardConnection.gd" id="2_at0n6"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardNode.gd" id="3_wvy58"]
+[ext_resource type="PackedScene" uid="uid://c1miw6xy45v1q" path="res://addons/Mournyard/Demo/Kenney - Mini Dungeon/floor.glb" id="4_thxgx"]
+
+[sub_resource type="Resource" id="Resource_ajmhc"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_7ulg7"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [true, true, true, true, true, true, true, true, true]
+
+[sub_resource type="Resource" id="Resource_166iw"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = true
+sockets = [null, null, null, null, null, null, true, true, true]
+
+[sub_resource type="Resource" id="Resource_1shig"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = true
+sockets = [null, null, null, null, null, null, true, true, true]
+
+[sub_resource type="Resource" id="Resource_hdix3"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = true
+sockets = [null, null, null, null, null, null, true, true, true]
+
+[sub_resource type="Resource" id="Resource_ua8oh"]
+resource_local_to_scene = true
+script = ExtResource("2_at0n6")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = true
+sockets = [null, null, null, null, null, null, true, true, true]
+
+[sub_resource type="Resource" id="Resource_pxp34"]
+resource_local_to_scene = true
+script = ExtResource("3_wvy58")
+connections = [SubResource("Resource_ajmhc"), SubResource("Resource_7ulg7"), SubResource("Resource_166iw"), SubResource("Resource_1shig"), SubResource("Resource_hdix3"), SubResource("Resource_ua8oh")]
+rotation = 0
+
+[node name="floor_01" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+script = ExtResource("1_i03gl")
+node = SubResource("Resource_pxp34")
+tags = Array[String](["dungeon"])
+
+[node name="floor" parent="." instance=ExtResource("4_thxgx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 1)
+
+[node name="floor2" parent="." instance=ExtResource("4_thxgx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, 1)
+
+[node name="floor3" parent="." instance=ExtResource("4_thxgx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, -1)
+
+[node name="floor4" parent="." instance=ExtResource("4_thxgx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, -1)

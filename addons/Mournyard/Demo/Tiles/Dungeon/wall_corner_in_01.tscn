@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnln4f8s7u02x"]
+
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardTile.gd" id="1_b5o2s"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardConnection.gd" id="2_n6e1c"]
+[ext_resource type="Script" path="res://addons/Mournyard/Scripts/YardNode.gd" id="3_ya8lq"]
+[ext_resource type="PackedScene" uid="uid://c1miw6xy45v1q" path="res://addons/Mournyard/Demo/Kenney - Mini Dungeon/floor.glb" id="4_0q1cv"]
+[ext_resource type="PackedScene" uid="uid://bt2amtrgxqp2c" path="res://addons/Mournyard/Demo/Kenney - Mini Dungeon/wall.glb" id="5_coeos"]
+
+[sub_resource type="Resource" id="Resource_12hr0"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 1, 0)
+gate = false
+sockets = [null, null, null, null, null, null, null, null, null]
+
+[sub_resource type="Resource" id="Resource_7jdwu"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, -1, 0)
+gate = false
+sockets = [null, null, null, null, true, true, false, true, true]
+
+[sub_resource type="Resource" id="Resource_ngx5k"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 1)
+gate = true
+sockets = [null, null, null, false, true, true, true, true, null]
+
+[sub_resource type="Resource" id="Resource_ffdlt"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(0, 0, -1)
+gate = false
+sockets = [null, null, null, true, true, true, null, false, false]
+
+[sub_resource type="Resource" id="Resource_xv8wp"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(-1, 0, 0)
+gate = true
+sockets = [null, null, null, true, true, false, false, true, true]
+
+[sub_resource type="Resource" id="Resource_r0k6b"]
+resource_local_to_scene = true
+script = ExtResource("2_n6e1c")
+position = Vector3(0, 0, 0)
+direction = Vector3(1, 0, 0)
+gate = false
+sockets = [null, null, null, true, true, true, null, null, null]
+
+[sub_resource type="Resource" id="Resource_dmow3"]
+resource_local_to_scene = true
+script = ExtResource("3_ya8lq")
+connections = [SubResource("Resource_12hr0"), SubResource("Resource_7jdwu"), SubResource("Resource_ngx5k"), SubResource("Resource_ffdlt"), SubResource("Resource_xv8wp"), SubResource("Resource_r0k6b")]
+rotation = 0
+
+[node name="wall_corner_in_01" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+script = ExtResource("1_b5o2s")
+node = SubResource("Resource_dmow3")
+
+[node name="floor" parent="." instance=ExtResource("4_0q1cv")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, 1)
+
+[node name="wall" parent="." instance=ExtResource("5_coeos")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0, -1)
+
+[node name="wall2" parent="." instance=ExtResource("5_coeos")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, -1)
+
+[node name="wall3" parent="." instance=ExtResource("5_coeos")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 1)

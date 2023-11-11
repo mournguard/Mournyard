@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://kn5gh7geb3s1"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_4pax6"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/PlanControls.gd" id="2_8t5eo"]
+
+[node name="PlanControls" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4pax6")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 12
+script = ExtResource("2_8t5eo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Till" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "Till"
+
+[node name="Reset" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "Reset"
+
+[node name="Iterate" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "Iterate"
+
+[node name="Collapse" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "Collapse"
+
+[connection signal="pressed" from="HBoxContainer/Till" to="." method="_on_till_pressed"]
+[connection signal="pressed" from="HBoxContainer/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="HBoxContainer/Iterate" to="." method="_on_iterate_pressed"]
+[connection signal="pressed" from="HBoxContainer/Collapse" to="." method="_on_collapse_pressed"]

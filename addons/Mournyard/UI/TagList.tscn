@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbpk0s0707c8p"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_tlw4w"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/TagList.gd" id="1_yclt2"]
+[ext_resource type="Texture2D" uid="uid://cpcmr60cqabps" path="res://addons/Mournyard/Images/delete.png" id="2_8jhtl"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_go41r"]
+action = &"ui_accept"
+
+[sub_resource type="Shortcut" id="Shortcut_fyc0a"]
+events = [SubResource("InputEventAction_go41r")]
+
+[node name="TagList" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tlw4w")
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_yclt2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Tags
+"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Tags" type="HFlowContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/MarginContainer/HBoxContainer" node_paths=PackedStringArray("shortcut_context")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+shortcut_context = NodePath("..")
+placeholder_text = "Add Tag"
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" node_paths=PackedStringArray("shortcut_context")]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_fyc0a")
+text = "+"
+
+[node name="Templates" type="Control" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Tag" type="Button" parent="Templates"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 127.0
+offset_bottom = 31.0
+mouse_default_cursor_shape = 8
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0.5)
+text = "This is a tag"
+icon = ExtResource("2_8jhtl")
+
+[connection signal="text_submitted" from="VBoxContainer/MarginContainer/HBoxContainer/LineEdit" to="." method="_on_add_tag"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_add_tag_button"]

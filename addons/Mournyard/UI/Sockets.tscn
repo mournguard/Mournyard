@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctd40ssf8qsjg"]
+
+[ext_resource type="Theme" uid="uid://cr83xrjbfqy1r" path="res://addons/Mournyard/theme.tres" id="1_ltvnd"]
+[ext_resource type="Texture2D" uid="uid://exu1o6t5ephy" path="res://addons/Mournyard/Images/edit_sockets.png" id="2_tic2l"]
+[ext_resource type="Script" path="res://addons/Mournyard/UI/Sockets.gd" id="2_wyyx1"]
+[ext_resource type="Texture2D" uid="uid://cbjqdyxw3wvea" path="res://addons/Mournyard/Images/sockets_empty.png" id="3_oiwlq"]
+[ext_resource type="Texture2D" uid="uid://b7jg3vljiadck" path="res://addons/Mournyard/Images/sockets_bottom.png" id="6_vvn35"]
+
+[node name="Sockets" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ltvnd")
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("2_wyyx1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Sockets"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+toggle_mode = true
+text = "Edit Sockets"
+icon = ExtResource("2_tic2l")
+icon_alignment = 2
+
+[node name="Clear" type="Button" parent="VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Clear"
+icon = ExtResource("3_oiwlq")
+icon_alignment = 2
+
+[node name="Presets" type="MenuButton" parent="VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Presets"
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+columns = 3
+
+[node name="Middle" type="MenuButton" parent="VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Middle Presets"
+icon = ExtResource("6_vvn35")
+item_count = 3
+popup/item_0/text = "aaaaaaaaa"
+popup/item_0/id = 0
+popup/item_1/text = "bbbbbb"
+popup/item_1/id = 1
+popup/item_2/text = "dasfdasdf"
+popup/item_2/id = 2
+
+[node name="Top" type="MenuButton" parent="VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Top Presets"
+icon = ExtResource("6_vvn35")
+item_count = 3
+popup/item_0/text = "aaaaaaaaa"
+popup/item_0/id = 0
+popup/item_1/text = "bbbbbb"
+popup/item_1/id = 1
+popup/item_2/text = "dasfdasdf"
+popup/item_2/id = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="toggled" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_toggled"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Clear" to="." method="_on_clear_pressed"]
